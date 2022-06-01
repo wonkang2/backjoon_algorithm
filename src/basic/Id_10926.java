@@ -20,6 +20,7 @@ public class Id_10926 {
 		Scanner sc = new Scanner(System.in);
 		
 		String id = sc.next();
+		sc.close();
 		
 		System.out.println(id + "??!");
 	}

@@ -17,6 +17,7 @@ public class division_1008 {
 		Scanner sc = new Scanner(System.in);
 		double a = sc.nextDouble();
 		double b = sc.nextDouble();
+		sc.close();
 
 		System.out.println(a / b);
 	}
