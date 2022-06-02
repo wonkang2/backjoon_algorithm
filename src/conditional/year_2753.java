@@ -1,7 +1,6 @@
 package conditional;
 
 import java.util.Scanner;
-
 /**
  * 연도가 주어졌을 때, 윤년이면 1, 아니면 0을 출력하는 
  * 프로그램을 작성하시오.윤년은 연도가 4의 배수이면서, 
@@ -32,5 +31,4 @@ public class year_2753 {
 		System.out.println(result);
 		
 	}
-
 }

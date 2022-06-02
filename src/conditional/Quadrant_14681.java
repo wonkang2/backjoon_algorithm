@@ -1,7 +1,6 @@
 package conditional;
 
 import java.util.Scanner;
-
 /**
  * 첫 줄에는 정수 x가 주어진다. 
  * (−1000 ≤ x ≤ 1000; x ≠ 0) 
@@ -35,7 +34,5 @@ public class Quadrant_14681 {
 		}
 		
 		System.out.println(result);
-		
 	}
-
 }

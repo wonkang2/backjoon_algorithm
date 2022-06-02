@@ -1,7 +1,6 @@
 package conditional;
 
 import java.util.Scanner;
-
 /**
  * 첫째 줄에 두 정수 H와 M이 주어진다. 
  * (0 ≤ H ≤ 23, 0 ≤ M ≤ 59) 그리고 이것은 
