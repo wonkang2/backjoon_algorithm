@@ -16,7 +16,7 @@ public class Quadrant_14681 {
 
 		int x = sc.nextInt();
 		int y = sc.nextInt();
-		
+		sc.close();
 		int result = 0;
 		
 		if (x > 0) {

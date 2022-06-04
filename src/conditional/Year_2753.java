@@ -14,12 +14,13 @@ import java.util.Scanner;
  * 
  * 첫째 줄에 윤년이면 1, 아니면 0을 출력한다.
  */
-public class year_2753 {
+public class Year_2753 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
 		int year = sc.nextInt();
+		sc.close();
 		int result = 0;
 		
 		if (year % 400 == 0) {

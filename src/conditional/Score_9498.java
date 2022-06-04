@@ -19,6 +19,7 @@ public class Score_9498 {
 		Scanner sc = new Scanner(System.in);
 		
 		int score = sc.nextInt();
+		sc.close();
 		char result;
 		
 		if (score > 89) {

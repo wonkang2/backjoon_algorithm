@@ -11,7 +11,7 @@ import java.util.Scanner;
  * 절대오차 또는 상대오차가 10-9 이하이면 정답이다.
  */
 
-public class division_1008 {
+public class Division_1008 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

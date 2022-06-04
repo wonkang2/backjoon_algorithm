@@ -21,6 +21,7 @@ public class Alarm_2884 {
 
 		int h = sc.nextInt();
 		int m = sc.nextInt();
+		sc.close();
 		int i = 45;
 		
 		m -= 45;
