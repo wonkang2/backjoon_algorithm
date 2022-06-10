@@ -14,7 +14,7 @@ public class MinMax_10818 {
 		for (int i = 0; i < n; i++) {
 			arr[i] = sc.nextInt();
 		}
-
+		
 		max = arr[0];
 		min = arr[0];
 
@@ -27,6 +27,7 @@ public class MinMax_10818 {
 			}
 		}
 		System.out.printf("%d %d", min, max);
+		sc.close();
 	}
 
 }
