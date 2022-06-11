@@ -29,7 +29,6 @@ public class Average_1546 {
 		average = average / n;
 		System.out.println(average);
 		
-		
 		sc.close();
 	}
 }
