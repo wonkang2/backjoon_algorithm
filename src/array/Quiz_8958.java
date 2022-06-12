@@ -22,5 +22,6 @@ public class Quiz_8958 {
 			System.out.println(total);
 		}
 		sc.close();
+		
 	}
 }
