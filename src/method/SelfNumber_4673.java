@@ -7,7 +7,7 @@ public class SelfNumber_4673 {
 
 		setNumbers(numbers);
 
-		getselfNumber(numbers);
+		getSelfNumber(numbers);
 
 		for (int x : numbers) {
 			if (x != 0) {
@@ -23,7 +23,7 @@ public class SelfNumber_4673 {
 		}
 	}
 
-	static void getselfNumber(int[] numbers) {
+	static void getSelfNumber(int[] numbers) {
 
 		String tmpStr = null;
 		int tmp = 0;
