@@ -1,58 +1,52 @@
 package method;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class SelfNumber_4673 {
 
 	public static void main(String[] args) {
-		ArrayList<Integer> arr = new ArrayList <Integer>();
 		int[] numbers = new int[10000];
-		
-		getNumbers(numbers);
-		
 
-		getSelfNumber(numbers, arr);
-		
-		
-		
-		
-	}
-	
-	static void getNumbers(int[] numbers) {
-		for(int i = 0; i < 10000; i++) {
-			numbers[i] = i + 1;			
+		setNumbers(numbers);
+
+		getselfNumber(numbers);
+
+		for (int x : numbers) {
+			if (x != 0) {
+				System.out.println(x);
+			}
 		}
+
 	}
-	
-	static void getSelfNumber(int[] numbers, ArrayList<Integer> arr) {
-		
-		String tmpStr = null;
-		int tmp;
-		
+
+	static void setNumbers(int[] numbers) {
 		for (int i = 0; i < 10000; i++) {
-			tmp = 0;
-			tmp = numbers[i];
-			tmpStr = Integer.toString(i+1);
-			
-			for (int j = 0; j < tmpStr.length(); j++) {
-				tmp = tmp + Character.getNumericValue(tmpStr.charAt(j)); 
-			}
-
-			if(tmp > 10000) {
-				break;
-			}
-			numbers[tmp - 1] = 0;
+			numbers[i] = i + 1;
 		}
-		System.out.println(Arrays.toString(numbers));
-		
-//		for (int i = 0; i < numbers.length; i++) {
-//			if(numbers[i] != 0) {
-//				System.out.println(numbers[i]);
-//			}
-//		}
 	}
-	
+
+	static void getselfNumber(int[] numbers) {
+
+		String tmpStr = null;
+		int tmp = 0;
+		int[] tmpArr = new int[10000];
+
+		for (int i = 0; i < 10000; i++) {
+			tmp = numbers[i];
+			tmpStr = Integer.toString(numbers[i]);
+
+			for (int j = 0; j < tmpStr.length(); j++) {
+				tmp = tmp + Character.getNumericValue(tmpStr.charAt(j));
+			}
+			tmpArr[i] = tmp;
+		}
+
+		for (int i = 0; i < tmpArr.length; i++) {
+			for (int j = 0; j < numbers.length; j++) {
+				if (numbers[j] == tmpArr[i]) {
+					numbers[j] = 0;
+				}
+			}
+		}
+
+	}
+
 }
-
-
