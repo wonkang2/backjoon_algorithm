@@ -12,11 +12,13 @@ public class AsciiCode_11654 {
 		
 		if(inp.length() > 1) {
 			System.out.println("알파벳 소문자, 대문자, 숫자 0-9 중 하나만 입력하세요.");
+			sc.close();
 			return;
 		}
 		
 		char chr = inp.charAt(0);
 		
 		System.out.println((int)chr);
+		sc.close();
 	}
 }
