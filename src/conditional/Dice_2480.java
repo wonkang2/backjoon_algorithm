@@ -32,6 +32,7 @@ public class Dice_2480 {
 		}
 		
 		System.out.println(money);
+		sc.close();
 	}
 
 }
