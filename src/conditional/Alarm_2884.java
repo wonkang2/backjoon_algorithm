@@ -36,6 +36,7 @@ public class Alarm_2884 {
 		}
 		
 		System.out.printf("%d %d",h, m);
+		sc.close();
 	}
 
 }
