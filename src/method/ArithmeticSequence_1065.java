@@ -40,6 +40,7 @@ public class ArithmeticSequence_1065 {
 			}
 		}
 		System.out.println(cnt);
+		sc.close();
 			
 	}
 }
