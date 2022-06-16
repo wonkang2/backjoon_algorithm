@@ -17,6 +17,7 @@ public class Plus_1000 {
 		int a = sc.nextInt();
 		int b = sc.nextInt();
 		System.out.println(a + b);
+		sc.close();
 	}
 
 }
