@@ -1,18 +1,22 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st;
         int capacity = Integer.parseInt(br.readLine());
         Stack stk = new Stack(capacity);
-        StringBuilder sb;
-        int num;
+        
         int i = 0;
         while (i < capacity) {
-            sb = new StringBuilder(br.readLine());
-            switch (sb.toString()) {
+            st = new StringTokenizer(br.readLine());
+            switch (st.nextToken()) {
+                case "push":
+                    stk.push(Integer.parseInt(st.nextToken()));
+                    break;
                 case "pop":
                     System.out.println(stk.pop());
                     break;
@@ -24,11 +28,6 @@ public class Main {
                     break;
                 case "top":
                     System.out.println(stk.top());
-                    break;
-                default:
-                    sb.delete(0, "push ".length());
-                    num = Integer.parseInt(sb.toString());
-                    stk.push(num);
                     break;
             }
             i++;
