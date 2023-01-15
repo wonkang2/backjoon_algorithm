@@ -4,38 +4,41 @@ import java.util.Stack;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        StringBuffer sb = new StringBuffer();
+        int n = sc.nextInt();
+        int[] numArr = new int[n];
         Stack<Integer> stack = new Stack<>();
-        int N = sc.nextInt();
-        int[] numArr = new int[N];
-
-        for (int i = 0; i < N; i++) {
+        StringBuffer result = new StringBuffer();
+        boolean isAsc = true;
+        int num = 0;
+        int point = 1; // 1 <= n && n <= 100,000
+        for (int i = 0; i < n; i++) {
             numArr[i] = sc.nextInt();
         }
-        int num = 1;
-        boolean check = true;
-        for (int i = 0; i < numArr.length; i++) {
-            int temp1 = numArr[i];
-            if (temp1 >= num) {
-                while (temp1 >= num) {
-                    stack.push(num++);
-                    sb.append("+\n");
+
+        for (int i = 0; i < n; i++) {
+            num = numArr[i];
+            if (point <= num) {
+                while (point <= num) {
+                    stack.push(point++);
+                    result.append("+\n");
                 }
                 stack.pop();
-                sb.append("-\n");
+                result.append("-\n");
             } else {
-                int temp2 = stack.pop();
-                if (temp2 > temp1) {
+                if (stack.peek() > num) {
+                    isAsc = false;
                     System.out.println("NO");
-                    check = false;
                     break;
                 } else {
-                    sb.append("-\n");
+                    stack.pop();
+                    result.append("-\n");
                 }
             }
         }
-        if (check) {
-            System.out.println(sb);
+
+        if (isAsc) {
+            System.out.println(result);
         }
+
     }
 }
